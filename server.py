@@ -14,7 +14,7 @@ def main():
     return 'hello there'
 
 @app.route('/main')
-def main():
+def main_route():
     req = requests.get('https://naas.isalman.dev/no')
     return req.json()['reason']
 
