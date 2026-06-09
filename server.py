@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from flask import Flask, jsonify
 import requests
 
-app = App(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def main():
@@ -19,7 +19,7 @@ def message():
     client.connect('bonsamie-mqtt', 1883, 60)
     client.publish('topic/test', 'Hello MQTT')
     client.disconnect()
-        return 'Message sent to MQTT broker'
+    return 'Message sent to MQTT broker'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
