@@ -16,8 +16,8 @@ def main_route():
 @app.route('/message')
 def message():
     client = mqtt.Client()
-    client.connect('bonsamie-mqtt', 1883, 60)
-    client.publish('topic/test', 'Hello MQTT')
+    client.connect('test.mosquitto.org', 1883, 60)
+    client.publish('topic/testm', 'Hello MQTT')
     client.disconnect()
     return 'Message sent to MQTT broker'
 
