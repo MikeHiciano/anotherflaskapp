@@ -11,6 +11,9 @@ MarkupSafe==3.0.3
 packaging==26.2
 paho-mqtt==2.1.0
 psycopg==3.3.4
+psycopg-binary==3.3.4
+psycopg2-binary==2.9.12
+python-dotenv==1.2.2
 requests==2.33.1
 typing_extensions==4.15.0
 urllib3==2.6.3
