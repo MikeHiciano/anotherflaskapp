@@ -25,7 +25,7 @@ class Server:
 
     @app.route('/message')
     def message():
-        client = mqtt.Client()
+        client = Client()
         client.connect('test.mosquitto.org', 1883, 60)
         client.publish(os.getenv('mqtt_topic'), 'Hello MQTT')
         client.disconnect()
